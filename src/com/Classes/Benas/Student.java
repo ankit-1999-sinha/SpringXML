@@ -1,4 +1,4 @@
-package com.Classes;
+package com.Classes.Benas;
 
 public class Student {
     private String name;
