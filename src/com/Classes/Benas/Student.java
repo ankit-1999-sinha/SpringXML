@@ -1,7 +1,13 @@
 package com.Classes.Benas;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Student {
+    @Value("Ankit")
     private String name;
+    @Value("2")
     private int rollNo;
 
     public String getName() {

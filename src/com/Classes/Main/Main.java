@@ -4,13 +4,20 @@ import com.Classes.Benas.Student;
 import com.Classes.CONFIGFILE.JavaConfigFIle;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 public class Main {
     public static void main(String[] args){
+
+//        String config_loc = "com/Classes/CONFIGFILE/applicationContext.xml";
+//        ApplicationContext context = new ClassPathXmlApplicationContext(config_loc);
+//        Student std = (Student) context.getBean("student");
+//        std.display();
+
         ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfigFIle.class);
-        Student student = (Student) context.getBean("stdId");
-        student.display();
+        Student std = (Student) context.getBean("student");
+        std.display();
     }
 }
 
